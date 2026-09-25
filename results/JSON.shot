@@ -1,0 +1,55 @@
+{
+  "project": "ai-learn-16-hybrid-search-bm25",
+  "seed": 42,
+  "config": {
+    "bm25_k1": 1.5,
+    "bm25_b": 0.75,
+    "dense_dim": 24,
+    "weighted_alpha": 0.5,
+    "rrf_k": 60,
+    "rrf_depth": 10
+  },
+  "n_queries": 28,
+  "ndcg@5": {
+    "bm25": {
+      "keyword": 1.0,
+      "paraphrase": 0.6678,
+      "all": 0.8102
+    },
+    "dense": {
+      "keyword": 0.5526,
+      "paraphrase": 0.9385,
+      "all": 0.7731
+    },
+    "rrf_k60": {
+      "keyword": 0.6052,
+      "paraphrase": 0.7818,
+      "all": 0.7061
+    },
+    "weighted_a0.5": {
+      "keyword": 1.0,
+      "paraphrase": 0.8529,
+      "all": 0.916
+    }
+  },
+  "mrr@10_all": {
+    "bm25": 0.8334,
+    "dense": 0.756,
+    "rrf_k60": 0.7052,
+    "weighted_a0.5": 0.9167
+  },
+  "recall@5_all": {
+    "bm25": 0.8036,
+    "dense": 0.8393,
+    "rrf_k60": 0.7857,
+    "weighted_a0.5": 0.9464
+  },
+  "best_alpha": {
+    "alpha": 0.7,
+    "keyword": 1.0,
+    "paraphrase": 0.9072,
+    "all": 0.947
+  },
+  "runtime_s": 0.0316,
+  "pass": true
+}
